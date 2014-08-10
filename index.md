@@ -30,7 +30,7 @@ How can you realize this dream?
 
 Well, it's easy: TO KNOW EVERYTHING CHECK EVERYTHING!
 
-![alt tag](C:\\Users\\CSP\\Desktop\\github_projects\\data_products_2\\data_products_2\\images\\variables.PNG)
+![alt tag](https://github.com/tommasobicego/data_products_sli/tree/gh-pages/images/variables.PNG)
 
 
 --- .class #id 
@@ -39,7 +39,7 @@ Well, it's easy: TO KNOW EVERYTHING CHECK EVERYTHING!
 
 And the first thing you obtain is... let me see.. RESULTS!
 
-![alt tag](C:\\Users\\CSP\\Desktop\\github_projects\\data_products_2\\data_products_2\\images\\coefficients.PNG)
+![alt tag](https://github.com/tommasobicego/data_products_sli/tree/gh-pages/images/coefficients.PNG)
 
 
 

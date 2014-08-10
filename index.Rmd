@@ -1,0 +1,88 @@
+---
+title       : Mtcars Linear Regression
+subtitle    : Miles/(US) gallon vs ...
+author      : Tommaso Bicego
+job         : Also a Coursera Student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+github      :
+  user: tommasobicego
+  repo: data_products_sli.git
+---
+
+## 1. Main Idea
+
+Have you ever thought about studying the mtcars dataset?
+Well, probably no, but if you're attending a course on coursera it would be a nice idea to have a little application that can do the easiest calculations straight away for YOU.
+
+See now the fantastic new functionalities we give you to study the mtcars dataset in new marvelous, curious and interesting ways.
+
+--- .class #id 
+
+## 2. Freedom
+
+Know everything about how the mpg variable of the mtcars dataset is related to the other variables.
+How can you realize this dream?
+
+Well, it's easy: TO KNOW EVERYTHING CHECK EVERYTHING!
+
+![alt tag](C:\\Users\\CSP\\Desktop\\github_projects\\data_products_2\\data_products_2\\images\\variables.PNG)
+
+
+--- .class #id 
+
+## 3. Results!
+
+And the first thing you obtain is... let me see.. RESULTS!
+
+![alt tag](C:\\Users\\CSP\\Desktop\\github_projects\\data_products_2\\data_products_2\\images\\coefficients.PNG)
+
+
+
+--- .class #id 
+
+## 4. Graphs! Graphs! GRAPHS!!
+
+Study how every variable is related to the mpg variable with wonderful exploratory graphs! 
+
+```{r, echo=F}
+par(mfcol=c(2,3))
+
+plot(y=mtcars$mpg, x=factor(mtcars$cyl), ylab="Miles/(US) gallon", xlab="Number of cylinders")
+
+reg <- lm(mtcars$mpg~mtcars$hp)
+plot(y=mtcars$mpg, x=mtcars$hp, ylab="Miles/(US) gallon", xlab="Gross horsepower")
+abline(reg)
+reg <- lm(mtcars$mpg~mtcars$drat)
+plot(y=mtcars$mpg, x=mtcars$drat, ylab="Miles/(US) gallon", xlab="Rear axle ratio")
+abline(reg)
+reg <- lm(mtcars$mpg~mtcars$wt)
+plot(y=mtcars$mpg, x=mtcars$wt, ylab="Miles/(US) gallon", xlab="Weight (lb/1000)")
+abline(reg)
+
+plot(y=mtcars$mpg, x=factor(mtcars$gear), ylab="Miles/(US) gallon", xlab="Number of forward gears")
+plot(y=mtcars$mpg, x=factor(mtcars$carb), ylab="Miles/(US) gallon", xlab="Number of carburetors")
+# ![alt tag](C:\\Users\\CSP\\Desktop\\github_projects\\data_products_2\\data_products_2\\images\\graphs.PNG)
+```
+
+
+--- .class #id 
+
+## 5. Don't Touch My Residuals!
+
+See how good-looking is your fit observing YOUR meaningful residual graph! 
+
+```{r, echo=F}
+var <- "mpg ~ factor(cyl) + disp + hp + wt + factor(carb)"
+plot(density(resid(lm(formula = var, data = mtcars))), main=paste(c("Residuals: ", var)))
+```
+
+
+
+
+
+
